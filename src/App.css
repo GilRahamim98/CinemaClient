@@ -1,38 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+.navBar {
+  position: -webkit-sticky ; 
+  position: sticky ;
+  top: 0;
+  z-index: 999;
+
+}
+
+p,
+ul {
+  font-family: "Oswald", sans-serif;
+}
+h1 {
+  font-family: "Ubuntu", sans-serif;
+}
+input {
+  border-radius: 4px;
+  border: 1px solid #0080ff;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .App {
   text-align: center;
+  position: relative;
+}
+body::-webkit-scrollbar {
+  width: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::-webkit-scrollbar-track {
+  background: rgb(206, 205, 205);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body::-webkit-scrollbar-thumb {
+  background-color: #0080ff;
+  border-radius: 5px;
+  border: 1px solid rgb(206, 205, 205);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*AllMovies*/
+.allMovies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: center;
+  justify-content: center;
+  margin: 10px 180px;
+}
+.movieChild {
+  flex: 4 0 20%;
+  border: 1px solid #0080ff;
+  border-radius: 8px;
+}
+
+/*AllSubs*/
+.allSubs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: center;
+  justify-content: center;
+  margin: 10px 180px;
+}
+.subChild{
+  flex: 4 0 40%;
+  border: 1px solid #0080ff;
+  border-radius: 8px;
+  width: fit-content;
+}
+/*endAllSubs */
+.allUsers{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: center;
+  justify-content: center;
+  margin: 10px 180px;
+  
+}
+.userChild{
+  flex: 4 0 40%;
+  border: 1px solid #0080ff;
+  border-radius: 8px;
+  width: fit-content;
+  padding-bottom: 20px;
+}
+
+img{
+  width:230px;
+  height: 323px;
+ 
+}
+
+
+.inCompButton {
+  font-family: "Oswald", sans-serif;
+  border-radius: 4px;
+  border: 2px solid #0080ff;
+  width: 120px;
+  height: 30px;
+}
+.inCompButton:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #389cff 100%);
+  background-color: #378de5;
+}
+
+.subMovieBtn {
+  font-family: "Oswald", sans-serif;
+  border-radius: 4px;
+  border: 2px solid #0080ff;
+  width: 130px;
+  height: 50px;
+}
+.subMovieBtn:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #389cff 100%);
+  background-color: #378de5;
+}
+
+.subMovieBtn:active {
+  position: relative;
+  top: 1px;
+}
+
+
+.icon{
+  position: absolute;
+  margin:12px 150px;
+  width:40px;
+  
+}
+.icon:hover{
+  cursor: pointer;
+}
+.fullsignin {
+  display: flex;
+  align-items: center;
+  padding-top: 200px;
+  width:100%;
+}
+.signin {
+  width: 100%;
+  max-width: 350px;
+  padding: 15px;
+  margin: auto;
+}
+.input-control {
+  width: 190px;
+  height: 40px;
+  margin-top: 3px;
+  z-index: 999;
+}
+
+
+.loginButton{
+  width:190px;
+  font-family: "Oswald", sans-serif;
+  
+}
+.loginButton:hover {
+  background: linear-gradient(to bottom, #389cff 5%, #389cff 100%);
+  background-color: #389cff;
+}
+
+
+.navBar span {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+}
+
+.webHead {
+  font-size: 3.5rem;
+}
+
+.findMovie button {
+  border: 2px solid #0080ff;
+  border-radius: 4px;
+  width: 55px;
+  height: 30px;
+}
+.findMovie button:hover {
+  background-color: #378de5;
+}
+.editMovie {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.editMovieBtn {
+  font-family: "Oswald", sans-serif;
+
+  margin-top: 30px;
+  border-radius: 4px;
+  border: 2px solid #0080ff;
+  width: 150px;
+  margin-left: 15px;
+  margin-right: 10px;
+  height: 30px;
+}
+.editMovieBtn:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #389cff 100%);
+  background-color: #378de5;
+}
+
+.custom-select {
+  font-family: "Oswald", sans-serif;
+  color: #0080ff;
+  height: 35px;
+  border-radius: 4px;
+  margin-right: 7px;
+  padding-top: 3px;
+}
+
+input[name="newSubDate"] {
+  color: #0080ff;
+  padding: 6px;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  border: 1px solid #0080ff;
+  outline: none;
+  border-radius: 5px;
+  margin-right: 7px;
+}
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.subTheNewMovie {
+  font-family: "Oswald", sans-serif;
+
+
+}
+.subTheNewMovie:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #389cff 100%);
+  background-color: #378de5;
+}
+
+.allBtn {
+  font-family: "Oswald", sans-serif;
+  border-radius: 4px;
+  border: 2px solid #0080ff;
+  width: 70px;
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 30px;
+}
+.movieBtn:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #389cff 100%);
+  background-color: #378de5;
+}
+
+.subsUl {
+  color: #0080ff;
+}
+
+.editInput {
+  width: 300px;
+}
+
+.cont {
+  position:relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+.cont:hover .image{
+  filter: blur(4px);
+}
+
+.cont:hover .overlay {
+  opacity: 1;
+}
+
+.textOnImage {
   color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.addMovieBtn{
+  margin-top: 30px;
+}
+.addMovieBtn Button{
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.registerPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+}
+.formReg{
+  font-family: "Oswald", sans-serif;
+}
+.formReg input{
+  width:180px;
+  margin-top: 10px;
+}
+.formReg table{
+  width:300px;
 }
